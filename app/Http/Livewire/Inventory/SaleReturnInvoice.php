@@ -1,0 +1,29 @@
+<?php
+
+namespace App\Http\Livewire\Inventory;
+use App\Models\Setting\ProfileSetting;
+use App\Models\Billing\Invoice;
+use App\Traits\NumberToWord;
+use Illuminate\Support\Facades\Auth;
+use Livewire\Component;
+
+class SaleReturnInvoice extends Component
+{
+    use NumberToWord;
+    public $InvoiceId;
+    public function mount($id=NULL){
+       $this->InvoiceId=$id;
+    }
+    public function render()
+    {
+        $invoice=Invoice::find($this->InvoiceId);
+        $numberToWord=$this->numtowords($invoice->amount_to_pay, $invoice->Branch->Currency->in_word_prefix, $invoice->Branch->Currency->in_word_surfix, $invoice->Branch->Currency->in_word_prefix_position, $invoice->Branch->Currency->in_word_surfix_position);
+        $numberToWordVat=$this->numtowords($invoice->total_vat, $invoice->Branch->Currency->in_word_prefix, $invoice->Branch->Currency->in_word_surfix, $invoice->Branch->Currency->in_word_prefix_position, $invoice->Branch->Currency->in_word_surfix_position);
+        return view('livewire.inventory.sale-return-invoice',[
+            'invoice'=>Invoice::whereCompanyId(Auth::user()->company_id)->find($this->InvoiceId),
+            'profilesetting' => ProfileSetting::whereCompanyId(Auth::user()->company_id)->first(),
+            'numberToWordTotal'=>$numberToWord,
+            'numberToWordVat'=>$numberToWordVat,
+        ])->layout('layouts.invoice-master');
+    }
+}
