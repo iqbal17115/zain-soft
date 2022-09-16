@@ -1,0 +1,71 @@
+php artisan make:livewire AccountsModule/Transaction
+php artisan make:livewire AccountsModule/Entries
+
+php artisan make:livewire accounts-setting/cost-center
+php artisan make:livewire accounts-setting/chart-of-section
+php artisan make:livewire accounts-setting/chart-of-group
+php artisan make:livewire accounts-setting/chart-of-account
+php artisan make:livewire accounts-setting/branch
+
+php artisan make:livewire accounts-setting/currency
+    php artisan make:livewire accounts-setting/head-of-account
+php artisan make:livewire accounts-setting/invoice-setting
+    php artisan make:livewire accounts-setting/opening-balance
+php artisan make:livewire accounts-setting/payment-method
+php artisan make:livewire accounts-setting/vat-setup
+php artisan make:livewire accounts-setting/warehouse
+
+php artisan make:livewire contacts/customer-accounts
+php artisan make:livewire contacts/supplier-accounts
+php artisan make:livewire contacts/staff-accounts
+php artisan make:livewire contacts/others-accounts
+
+php artisan make:livewire inventory/add-stock-adjustment
+php artisan make:livewire inventory/brand
+php artisan make:livewire inventory/category
+php artisan make:livewire inventory/delievery-list
+php artisan make:livewire inventory/delievery-note
+php artisan make:livewire inventory/generate-barcode
+php artisan make:livewire inventory/item-name
+php artisan make:livewire inventory/make-delievery-note
+php artisan make:livewire inventory/pos-terminal
+php artisan make:livewire inventory/purchase
+php artisan make:livewire inventory/purchase-list
+php artisan make:livewire inventory/quote
+php artisan make:livewire inventory/quote-list
+php artisan make:livewire inventory/requisition
+php artisan make:livewire inventory/requisition-list
+php artisan make:livewire inventory/sale-list
+php artisan make:livewire inventory/sales
+php artisan make:livewire inventory/stock-adjustment
+php artisan make:livewire inventory/transaction
+php artisan make:livewire inventory/unit
+
+php artisan make:livewire profile-setting/change-password
+php artisan make:livewire profile-setting/profile-setup
+php artisan make:livewire profile-setting/users-management
+php artisan make:livewire profile-setting/users-permission
+
+php artisan make:livewire reports/balance-sheet
+php artisan make:livewire reports/bank-book
+php artisan make:livewire reports/cost-center-report
+php artisan make:livewire reports/customer-ledger-report
+php artisan make:livewire reports/day-book
+php artisan make:livewire reports/income-statement
+php artisan make:livewire reports/payable-report
+php artisan make:livewire reports/profit-loss
+php artisan make:livewire reports/purchase-detail-report
+php artisan make:livewire reports/purchase-report
+php artisan make:livewire reports/purchase-return-report
+php artisan make:livewire reports/receivable-report
+php artisan make:livewire reports/sales-detail-report
+php artisan make:livewire reports/sales-report
+php artisan make:livewire reports/sales-return-report
+php artisan make:livewire reports/stock-reports
+php artisan make:livewire reports/supplier-ledger-report
+php artisan make:livewire reports/trail-balance
+php artisan make:livewire Reports/VatCollectionReport
+php artisan make:livewire Reports/VatReturnReport
+
+php artisan make:livewire dashboard
+
